@@ -1,0 +1,123 @@
+@charset "utf-8";
+* {
+	margin:0;
+	padding:0;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*画像の枠線を無しにする*/
+img {
+	border:0;
+}
+
+body {
+	font-family: Meiryo, メイリオ, sans-serif;
+	position: relative; 
+	z-index: 0;
+}
+
+header{
+	width: 100%; 
+	height: 70px; 
+	background-color: #044894;
+}
+
+header h1{
+	width:300px;
+	float:left; 
+	padding:15px 0 0 15px; 
+	color: #ffffff;
+}
+ 
+header #logo{
+	width:300px;
+	float:left; 
+	padding:15px 0 0 15px; 
+	color: #ffffff;
+}
+
+body:before {
+        background-image: url(../images/bg.png);
+        background-size: 100% auto;
+        background-position: center top;
+        content: "";
+        display: block;
+        position: fixed;
+        width: 100%;
+	height: 100%;
+	z-index: -1;
+    }
+
+
+/*メイン画面*/
+#content #header .logo img {
+        width: 100%;
+    }
+
+
+
+/*ルール紹介　背景部分*/
+
+#content #mainContent .wrap {
+        position: relative;
+        width: 100%;
+	max-width: 1080px;
+        border-radius: 60px;
+        background: #ffffff;
+        margin: -30px auto 0 auto;
+        box-sizing: border-box;
+        padding: 40px;
+}
+
+/*ルール紹介　4つの画像*/
+#content #mainContent .images img {
+        width: 100%;
+        margin-top: 16px;
+}
+
+#content #mainContent .images img:first-of-type {
+        margin-top: 0;
+}
+
+/*フッター*/
+footer{
+	width:100%;
+	height:60px;
+	background-color:#c29f35;
+}
+ 
+footer p{
+	width: 100%;
+	margin:0 auto;
+	color:#fff;
+	padding-top:22px;
+	font-size:12px;
+}
+
+
+
+/* pc用：幅768以上 */
+@media screen and (min-width: 768px){
+ .pcNone{
+	display: none;
+	}
+ .spNone{
+	display: block;
+	}
+}
+
+/* sp用：幅768未満 */
+@media screen and (max-width: 767px){
+ .pcNone{
+	display: block;
+	}
+ .spNone{
+	display: none;
+	}
+}
+
